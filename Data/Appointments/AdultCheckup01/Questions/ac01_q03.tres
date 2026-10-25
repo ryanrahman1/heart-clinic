@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="QuestionData" format=3 uid="uid://baenuwvugq42p"]
+
+[ext_resource type="Script" uid="uid://24g6bn1tbx0f" path="res://Scripts/resources/QuestionData.gd" id="1_ravmb"]
+
+[resource]
+script = ExtResource("1_ravmb")
+question_id = "ac03"
+question_text = "How well do you sleep at night?"
+response_text = "I sleep around 6 or 7 hours. I wake up sleepy, but morning coffee helps!"
+chart_note = "Sleeps 6-7 hours a night and wakes up feeling sleepy."
+comfort_change = 5.0
+trust_change = 5.0
+comfort_knowledge_modifier = 0.3999999999999999
+trust_knowledge_modifier = 0.6000000000000001
+evidence_value = 0.75
+metadata/_custom_type_script = "uid://24g6bn1tbx0f"

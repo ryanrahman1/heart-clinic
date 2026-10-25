@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="QuestionData" format=3 uid="uid://bwtu505vx5qrg"]
+
+[ext_resource type="Script" uid="uid://24g6bn1tbx0f" path="res://Scripts/resources/QuestionData.gd" id="1_4oqvb"]
+
+[resource]
+script = ExtResource("1_4oqvb")
+question_id = "ac10"
+question_text = "Are you ready for your big leg operation today?"
+response_text = "Leg operation?! My legs feel fine! Did you mix me up with another patient?"
+category = 2
+chart_note = "Patient was confused by the wrong question."
+comfort_change = -10.0
+trust_change = -20.0
+comfort_knowledge_modifier = -1.8
+trust_knowledge_modifier = -2.0
+metadata/_custom_type_script = "uid://24g6bn1tbx0f"

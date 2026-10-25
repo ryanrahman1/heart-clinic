@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ObservationData" format=3 uid="uid://bsmaruepspgis"]
+
+[ext_resource type="Script" uid="uid://7i2krupowtq1" path="res://Scripts/resources/ObservationData.gd" id="1_0fbxn"]
+
+[resource]
+script = ExtResource("1_0fbxn")
+observation_id = "ac03"
+display_name = "Slight Earwax"
+description = "Both eardrums look pink and healthy, with a tiny bit of soft earwax inside."
+metadata/_custom_type_script = "uid://7i2krupowtq1"

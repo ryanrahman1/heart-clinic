@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ObservationData" format=3 uid="uid://bwi6m7bar81el"]
+
+[ext_resource type="Script" uid="uid://7i2krupowtq1" path="res://Scripts/resources/ObservationData.gd" id="1_1sfyj"]
+
+[resource]
+script = ExtResource("1_1sfyj")
+observation_id = "ac01"
+display_name = "Normal Heart & Lungs"
+description = "Heart beat sounds steady and clear. Lungs sound clean with no wheezing or coughing sounds.
+"
+metadata/_custom_type_script = "uid://7i2krupowtq1"

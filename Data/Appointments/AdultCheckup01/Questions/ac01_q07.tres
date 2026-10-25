@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="QuestionData" format=3 uid="uid://bjgxx7f0yndqc"]
+
+[ext_resource type="Script" uid="uid://24g6bn1tbx0f" path="res://Scripts/resources/QuestionData.gd" id="1_5s2kl"]
+
+[resource]
+script = ExtResource("1_5s2kl")
+question_id = "ac07"
+question_text = "Are you feeling a sharp, crushing pain right in the middle of your chest?"
+response_text = "No! Why would you ask that?! Is my heart stopping?!"
+category = 2
+chart_note = "Dramatically asked about bad chest pain for no reason, causing panic"
+comfort_change = -15.0
+trust_change = -15.0
+comfort_knowledge_modifier = -1.5
+trust_knowledge_modifier = -1.8
+evidence_value = 0.1
+metadata/_custom_type_script = "uid://24g6bn1tbx0f"

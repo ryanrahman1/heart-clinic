@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="QuestionData" format=3 uid="uid://ga4w3xoucpcx"]
+
+[ext_resource type="Script" uid="uid://24g6bn1tbx0f" path="res://Scripts/resources/QuestionData.gd" id="1_s88nu"]
+
+[resource]
+script = ExtResource("1_s88nu")
+question_id = "ac08"
+question_text = "You are doing great! Is there anything special you want to ask me today?"
+response_text = "Thank you! I was wondering why I feel so tired lately."
+category = 1
+chart_note = "Patient wants to know why they feel tired."
+comfort_change = 12.0
+trust_change = 8.0
+comfort_knowledge_modifier = 0.6000000000000001
+trust_knowledge_modifier = 0.3999999999999999
+evidence_value = 0.65
+metadata/_custom_type_script = "uid://24g6bn1tbx0f"

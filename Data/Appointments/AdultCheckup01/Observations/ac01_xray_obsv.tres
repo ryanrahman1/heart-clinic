@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ObservationData" format=3 uid="uid://cf8wqovirxa25"]
+
+[ext_resource type="Script" uid="uid://7i2krupowtq1" path="res://Scripts/resources/ObservationData.gd" id="1_y5v5v"]
+
+[resource]
+script = ExtResource("1_y5v5v")
+observation_id = "ac04"
+display_name = "Normal Chest Bones"
+description = "The X-ray scan shows all rib bones are completely normal with no breaks or cracks."
+metadata/_custom_type_script = "uid://7i2krupowtq1"

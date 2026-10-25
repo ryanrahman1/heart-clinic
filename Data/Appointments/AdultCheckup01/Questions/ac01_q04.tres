@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="QuestionData" format=3 uid="uid://c34i33ad3orat"]
+
+[ext_resource type="Script" uid="uid://24g6bn1tbx0f" path="res://Scripts/resources/QuestionData.gd" id="1_v5s5o"]
+
+[resource]
+script = ExtResource("1_v5s5o")
+question_id = "ac04"
+question_text = "Checkups can be scary! How are you handling work and stress lately?"
+response_text = "Thanks for asking! Work has been super busy, so I've been feeling stressed."
+category = 1
+chart_note = "Patient feels stressed from work."
+comfort_change = 15.0
+trust_change = 10.0
+comfort_knowledge_modifier = 0.7999999999999998
+trust_knowledge_modifier = 0.5
+evidence_value = 0.7
+metadata/_custom_type_script = "uid://24g6bn1tbx0f"

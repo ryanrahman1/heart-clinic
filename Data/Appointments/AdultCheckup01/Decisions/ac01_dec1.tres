@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="DecisionData" format=3 uid="uid://vknb7lhcqiks"]
+
+[ext_resource type="Script" uid="uid://dvh462mms7sw1" path="res://Scripts/resources/DecisionData.gd" id="1_hc15u"]
+
+[resource]
+script = ExtResource("1_hc15u")
+decision_id = "ac01"
+decision_text = "Give them a high five! They are healthy. Order a quick blood test and see them next year."
+score = 1.0
+explanation = "Perfect choice! This is standard care for a healthy person."
+metadata/_custom_type_script = "uid://dvh462mms7sw1"

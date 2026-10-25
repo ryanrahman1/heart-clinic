@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="ExaminationData" format=3 uid="uid://bhicxm2wch246"]
+
+[ext_resource type="Script" uid="uid://dn2slsmn2rsfe" path="res://Scripts/resources/ExaminationData.gd" id="1_nee88"]
+
+[resource]
+script = ExtResource("1_nee88")
+examination_id = "xray_chest"
+display_name = "Chest X-ray"
+description = "Take an X-ray image of the patient's chest to help doctors examine their lungs, heart, and bones."
+comfort_change = -4.0
+trust_change = -6.0
+metadata/_custom_type_script = "uid://dn2slsmn2rsfe"

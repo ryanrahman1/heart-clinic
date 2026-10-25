@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="DecisionData" format=3 uid="uid://c7bcch8epukq4"]
+
+[ext_resource type="Script" uid="uid://dvh462mms7sw1" path="res://Scripts/resources/DecisionData.gd" id="1_x17oh"]
+
+[resource]
+script = ExtResource("1_x17oh")
+decision_id = "ac05"
+decision_text = "Call an ambulance to rush them to the Emergency Room!"
+explanation = "Big mistake! The patient is not in danger at all."
+metadata/_custom_type_script = "uid://dvh462mms7sw1"

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="DecisionData" format=3 uid="uid://dmabqr0u5i7cx"]
+
+[ext_resource type="Script" uid="uid://dvh462mms7sw1" path="res://Scripts/resources/DecisionData.gd" id="1_xbwri"]
+
+[resource]
+script = ExtResource("1_xbwri")
+decision_id = "ac10"
+decision_text = "Give them painkillers for being tired."
+score = 0.05
+explanation = "Dangerous choice! Pain medicine does not fix tiredness."
+metadata/_custom_type_script = "uid://dvh462mms7sw1"

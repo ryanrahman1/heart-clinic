@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="QuestionData" format=3 uid="uid://sna48td68gb5"]
+
+[ext_resource type="Script" uid="uid://24g6bn1tbx0f" path="res://Scripts/resources/QuestionData.gd" id="1_w13nn"]
+
+[resource]
+script = ExtResource("1_w13nn")
+question_id = "ac09"
+question_text = "Is anyone in your family sick or taking new medicine?"
+response_text = "My dad just found out he has diabetes, but everyone else is okay."
+chart_note = "Patient's father has diabetes."
+comfort_change = 2.0
+trust_change = 8.0
+comfort_knowledge_modifier = 0.2999999999999998
+trust_knowledge_modifier = 0.7000000000000002
+evidence_value = 0.8
+metadata/_custom_type_script = "uid://24g6bn1tbx0f"

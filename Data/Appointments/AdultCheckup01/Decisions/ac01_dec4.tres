@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="DecisionData" format=3 uid="uid://f7wuojf8a6c5"]
+
+[ext_resource type="Script" uid="uid://dvh462mms7sw1" path="res://Scripts/resources/DecisionData.gd" id="1_dpo4o"]
+
+[resource]
+script = ExtResource("1_dpo4o")
+decision_id = "ac04"
+decision_text = "Order a simple blood test to check why they feel tired, and call them next week."
+score = 0.9
+explanation = "Great choice! Checks their vitamins to make sure nothing is wrong."
+metadata/_custom_type_script = "uid://dvh462mms7sw1"

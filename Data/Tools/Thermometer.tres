@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ToolData" format=3 uid="uid://dr5ryniqmekk0"]
+
+[ext_resource type="Script" uid="uid://dn2slsmn2rsfe" path="res://Scripts/resources/ExaminationData.gd" id="1_afqar"]
+[ext_resource type="Script" uid="uid://c4xn0jvpqa04o" path="res://Scripts/resources/ToolData.gd" id="2_1apcy"]
+[ext_resource type="Resource" uid="uid://bbomyct3qov2x" path="res://Data/Appointments/AdultCheckup01/Examinations/ac01_temp.tres" id="2_lpymn"]
+
+[resource]
+script = ExtResource("2_1apcy")
+tool_id = "thermometer"
+display_name = "Thermometer"
+description = "A tool used to measure your body temperature and check if you have a fever or are healthy."
+examinations = Array[ExtResource("1_afqar")]([ExtResource("2_lpymn")])
+metadata/_custom_type_script = "uid://c4xn0jvpqa04o"

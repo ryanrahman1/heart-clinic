@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="DecisionData" format=3 uid="uid://df8k5h8oapsp3"]
+
+[ext_resource type="Script" uid="uid://dvh462mms7sw1" path="res://Scripts/resources/DecisionData.gd" id="1_0y0tr"]
+
+[resource]
+script = ExtResource("1_0y0tr")
+decision_id = "ac09"
+decision_text = "Tell them everyone gets tired and rush them out the door."
+score = 0.3
+explanation = "Not very nice. A good doctor listens when a patient says they are tired."
+metadata/_custom_type_script = "uid://dvh462mms7sw1"

@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="QuestionData" format=3 uid="uid://dt0wnifdc8bqj"]
+
+[ext_resource type="Script" uid="uid://24g6bn1tbx0f" path="res://Scripts/resources/QuestionData.gd" id="1_r0rh4"]
+
+[resource]
+script = ExtResource("1_r0rh4")
+question_id = "ac05"
+question_text = "Are you up to date on your vaccines and doctor tests?"
+response_text = "I got my flu shot last year, but I haven't had a blood test in a long time."
+chart_note = "Needs a routine blood test."
+trust_change = 12.0
+comfort_knowledge_modifier = 0.20000000000000018
+trust_knowledge_modifier = 0.8999999999999999
+evidence_value = 0.9
+metadata/_custom_type_script = "uid://24g6bn1tbx0f"

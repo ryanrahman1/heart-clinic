@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="DecisionData" format=3 uid="uid://cf7f6fmdi1hug"]
+
+[ext_resource type="Script" uid="uid://dvh462mms7sw1" path="res://Scripts/resources/DecisionData.gd" id="1_50ce3"]
+
+[resource]
+script = ExtResource("1_50ce3")
+decision_id = "ac06"
+decision_text = "Send them to the hospital to get a full body scan!"
+score = 0.1
+explanation = "Incorrect. Full body scans are for really sick people, not healthy checkups."
+metadata/_custom_type_script = "uid://dvh462mms7sw1"

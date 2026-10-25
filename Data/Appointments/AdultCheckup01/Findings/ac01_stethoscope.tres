@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="ExaminationFinding" format=3 uid="uid://8ug33ruuiawe"]
+
+[ext_resource type="Resource" uid="uid://cu433exwt7rdg" path="res://Data/Appointments/AdultCheckup01/Examinations/ac01_heart.tres" id="1_kavi8"]
+[ext_resource type="Script" uid="uid://c6gg3hufgd5j" path="res://Scripts/resources/ExaminationFinding.gd" id="1_trjuy"]
+[ext_resource type="Resource" uid="uid://bwi6m7bar81el" path="res://Data/Appointments/AdultCheckup01/Observations/ac01_stethoscope_obsv.tres" id="2_0qdu6"]
+
+[resource]
+script = ExtResource("1_trjuy")
+examination = ExtResource("1_kavi8")
+observation = ExtResource("2_0qdu6")
+evidence_value = 0.95
+metadata/_custom_type_script = "uid://c6gg3hufgd5j"

@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="ExaminationData" format=3 uid="uid://b0tyblnebb6vo"]
+
+[ext_resource type="Script" uid="uid://dn2slsmn2rsfe" path="res://Scripts/resources/ExaminationData.gd" id="1_rfcvo"]
+
+[resource]
+script = ExtResource("1_rfcvo")
+examination_id = "stethoscope_breathing"
+display_name = "Listen to Breathing"
+description = "Use a stethoscope to listen to the patient's lungs as they breathe in and out."
+comfort_change = 2.0
+trust_change = 3.0
+metadata/_custom_type_script = "uid://dn2slsmn2rsfe"

@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="QuestionData" format=3 uid="uid://chlj0j7svfoc8"]
+
+[ext_resource type="Script" uid="uid://24g6bn1tbx0f" path="res://Scripts/resources/QuestionData.gd" id="1_rl2ln"]
+
+[resource]
+script = ExtResource("1_rl2ln")
+question_id = "ac06"
+question_text = "Did you go on a trip to a jungle island last week?"
+response_text = "Um... no? I just went to work and came back home."
+category = 2
+chart_note = "Did not travel anywhere recently."
+comfort_change = -5.0
+trust_change = -10.0
+comfort_knowledge_modifier = -1.2
+trust_knowledge_modifier = -1.5
+evidence_value = 0.05
+metadata/_custom_type_script = "uid://24g6bn1tbx0f"

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="DecisionData" format=3 uid="uid://dbcuclkq7re7c"]
+
+[ext_resource type="Script" uid="uid://dvh462mms7sw1" path="res://Scripts/resources/DecisionData.gd" id="1_r53v5"]
+
+[resource]
+script = ExtResource("1_r53v5")
+decision_id = "ac07"
+decision_text = "Give them strong fever medicine 'just in case'."
+score = 0.15
+explanation = "Bad idea. Never give strong medicine to someone who isn't sick!"
+metadata/_custom_type_script = "uid://dvh462mms7sw1"

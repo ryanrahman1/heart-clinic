@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="DecisionData" format=3 uid="uid://c0q141kceuwew"]
+
+[ext_resource type="Script" uid="uid://dvh462mms7sw1" path="res://Scripts/resources/DecisionData.gd" id="1_13uvm"]
+
+[resource]
+script = ExtResource("1_13uvm")
+decision_id = "ac03"
+decision_text = "Send them to a heart surgeon right away!"
+score = 0.2
+explanation = "Oops! Their heart sounds totally clear, so this will just scare them."
+metadata/_custom_type_script = "uid://dvh462mms7sw1"

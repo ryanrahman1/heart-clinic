@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="ExamSheetData" format=3 uid="uid://xg50ostl1l4y"]
+
+[ext_resource type="Script" uid="uid://bjwk6wv84oy5i" path="res://Scripts/resources/ExamSheetData.gd" id="1_w0ysr"]
+
+[resource]
+script = ExtResource("1_w0ysr")
+reason_for_visit = "Yearly annual checkup."
+initial_symptoms = Array[String](["Feels fine today.", "Tired in the afternoon sometimes."])
+medical_history = Array[String](["Pollen allergies (takes medicine when needed)", "Family has high blood pressure.", "Got tetanus shot 3 years ago."])
+initial_notes = Array[String](["Patient is here for a normal checkup.", "Looks happy, healthy, and awake.", "Wants to talk about eating healthy and getting blood tests."])
+hints = Array[String](["A yearly checkup looks at food, sleep, and how the body is growing.", "You don't need to use big tools like X-rays for a healthy checkup!", "Checking heartbeats and asking about daily habits will help the most."])
+metadata/_custom_type_script = "uid://bjwk6wv84oy5i"

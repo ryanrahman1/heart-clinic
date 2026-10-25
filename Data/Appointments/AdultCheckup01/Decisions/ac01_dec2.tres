@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="DecisionData" format=3 uid="uid://dxfp2a8d4b7qx"]
+
+[ext_resource type="Script" uid="uid://dvh462mms7sw1" path="res://Scripts/resources/DecisionData.gd" id="1_u3o7o"]
+
+[resource]
+script = ExtResource("1_u3o7o")
+decision_id = "ac02"
+decision_text = "Tell them they are healthy, but remind them to sleep earlier and eat more veggies."
+score = 0.95
+explanation = "Great doctor work! Helps them fix their fatigue by building better habits."
+metadata/_custom_type_script = "uid://dvh462mms7sw1"

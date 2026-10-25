@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ObservationData" format=3 uid="uid://bvj13f7rl7mtu"]
+
+[ext_resource type="Script" uid="uid://7i2krupowtq1" path="res://Scripts/resources/ObservationData.gd" id="1_hf76s"]
+
+[resource]
+script = ExtResource("1_hf76s")
+observation_id = "ac02"
+display_name = "Normal Temperature"
+description = "Body temperature is 98.6°F (37°C). No sign of a fever or chills."
+metadata/_custom_type_script = "uid://7i2krupowtq1"

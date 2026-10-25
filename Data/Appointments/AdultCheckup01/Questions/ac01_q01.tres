@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="QuestionData" format=3 uid="uid://dh6sdqr6oympb"]
+
+[ext_resource type="Script" uid="uid://24g6bn1tbx0f" path="res://Scripts/resources/QuestionData.gd" id="1_6p5cd"]
+
+[resource]
+script = ExtResource("1_6p5cd")
+question_id = "ac01"
+question_text = "How have you been feeling overall lately?"
+response_text = "Pretty good! I get a little tired in the afternoon, but that’s about it."
+chart_note = "Patient feels good overall, just a little tired in the afternoons."
+comfort_change = 5.0
+trust_change = 10.0
+comfort_knowledge_modifier = 0.5
+trust_knowledge_modifier = 0.7999999999999998
+evidence_value = 0.85
+metadata/_custom_type_script = "uid://24g6bn1tbx0f"

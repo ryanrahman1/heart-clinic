@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ToolData" format=3 uid="uid://dtulxdemgxcwd"]
+
+[ext_resource type="Script" uid="uid://dn2slsmn2rsfe" path="res://Scripts/resources/ExaminationData.gd" id="1_nsqq1"]
+[ext_resource type="Resource" uid="uid://t2ci3tx0cgju" path="res://Data/Appointments/AdultCheckup01/Examinations/ac01_ear.tres" id="2_gisuf"]
+[ext_resource type="Script" uid="uid://c4xn0jvpqa04o" path="res://Scripts/resources/ToolData.gd" id="2_jt02a"]
+
+[resource]
+script = ExtResource("2_jt02a")
+tool_id = "otoscope"
+display_name = "Otoscope"
+description = "A tool with a small light used to look inside your ears to check if they are clear and healthy."
+examinations = Array[ExtResource("1_nsqq1")]([ExtResource("2_gisuf")])
+metadata/_custom_type_script = "uid://c4xn0jvpqa04o"

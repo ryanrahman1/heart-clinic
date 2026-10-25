@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="ExaminationFinding" format=3 uid="uid://cywogs4i7lt26"]
+
+[ext_resource type="Resource" uid="uid://bhicxm2wch246" path="res://Data/Appointments/AdultCheckup01/Examinations/ac01_chestx.tres" id="1_n1nid"]
+[ext_resource type="Resource" uid="uid://cf8wqovirxa25" path="res://Data/Appointments/AdultCheckup01/Observations/ac01_xray_obsv.tres" id="2_020cb"]
+[ext_resource type="Script" uid="uid://c6gg3hufgd5j" path="res://Scripts/resources/ExaminationFinding.gd" id="3_li4gx"]
+
+[resource]
+script = ExtResource("3_li4gx")
+examination = ExtResource("1_n1nid")
+observation = ExtResource("2_020cb")
+evidence_value = 0.05
+metadata/_custom_type_script = "uid://c6gg3hufgd5j"

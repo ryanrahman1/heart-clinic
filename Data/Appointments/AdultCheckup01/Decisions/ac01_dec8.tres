@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="DecisionData" format=3 uid="uid://tyi04g60s2xm"]
+
+[ext_resource type="Script" uid="uid://dvh462mms7sw1" path="res://Scripts/resources/DecisionData.gd" id="1_spm3i"]
+
+[resource]
+script = ExtResource("1_spm3i")
+decision_id = "ac08"
+decision_text = "Ask them to write down their blood pressure numbers at home for two weeks."
+score = 0.85
+explanation = "Good thinking! Helps keep an eye on family high blood pressure."
+metadata/_custom_type_script = "uid://dvh462mms7sw1"

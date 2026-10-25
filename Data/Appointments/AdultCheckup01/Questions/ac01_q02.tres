@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="QuestionData" format=3 uid="uid://cxm1gwiytnrk2"]
+
+[ext_resource type="Script" uid="uid://24g6bn1tbx0f" path="res://Scripts/resources/QuestionData.gd" id="1_k70ia"]
+
+[resource]
+script = ExtResource("1_k70ia")
+question_id = "ac02"
+question_text = "What kind of food do you eat, and do you get time to play outside?"
+response_text = "I walk every day, but I eat a lot of fast food because I'm busy with work."
+chart_note = "Walks daily, but eats a lot of fast food."
+comfort_change = 2.0
+trust_change = 8.0
+comfort_knowledge_modifier = 0.2999999999999998
+trust_knowledge_modifier = 0.7000000000000002
+evidence_value = 0.8
+metadata/_custom_type_script = "uid://24g6bn1tbx0f"

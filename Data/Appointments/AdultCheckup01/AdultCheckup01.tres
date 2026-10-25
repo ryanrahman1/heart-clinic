@@ -1,0 +1,51 @@
+[gd_resource type="Resource" script_class="AppointmentData" format=3 uid="uid://bud00nobuh7t4"]
+
+[ext_resource type="Script" uid="uid://c4xn0jvpqa04o" path="res://Scripts/resources/ToolData.gd" id="1_8y74s"]
+[ext_resource type="Script" uid="uid://dvh462mms7sw1" path="res://Scripts/resources/DecisionData.gd" id="2_1iwtw"]
+[ext_resource type="Script" uid="uid://c6gg3hufgd5j" path="res://Scripts/resources/ExaminationFinding.gd" id="2_15lxx"]
+[ext_resource type="Resource" uid="uid://gcortp1j38jh" path="res://Data/Tools/XrayMachine.tres" id="2_kovax"]
+[ext_resource type="Resource" uid="uid://c5cugmfd0elfq" path="res://Data/Tools/Stethoscope.tres" id="3_75gbn"]
+[ext_resource type="Resource" uid="uid://xg50ostl1l4y" path="res://Data/Appointments/AdultCheckup01/AC01Sheet.tres" id="3_m6t6e"]
+[ext_resource type="Script" uid="uid://24g6bn1tbx0f" path="res://Scripts/resources/QuestionData.gd" id="3_nq46j"]
+[ext_resource type="Script" uid="uid://cwsx7w54sss6e" path="res://Scripts/resources/AppointmentData.gd" id="4_6u6l3"]
+[ext_resource type="Resource" uid="uid://dtulxdemgxcwd" path="res://Data/Tools/Otoscope.tres" id="4_72tqk"]
+[ext_resource type="Resource" uid="uid://dr5ryniqmekk0" path="res://Data/Tools/Thermometer.tres" id="5_ciull"]
+[ext_resource type="Resource" uid="uid://dh6sdqr6oympb" path="res://Data/Appointments/AdultCheckup01/Questions/ac01_q01.tres" id="6_h40a2"]
+[ext_resource type="Resource" uid="uid://cxm1gwiytnrk2" path="res://Data/Appointments/AdultCheckup01/Questions/ac01_q02.tres" id="7_22yg0"]
+[ext_resource type="Resource" uid="uid://vknb7lhcqiks" path="res://Data/Appointments/AdultCheckup01/Decisions/ac01_dec1.tres" id="7_hqc77"]
+[ext_resource type="Resource" uid="uid://dxfp2a8d4b7qx" path="res://Data/Appointments/AdultCheckup01/Decisions/ac01_dec2.tres" id="8_7sf8e"]
+[ext_resource type="Resource" uid="uid://baenuwvugq42p" path="res://Data/Appointments/AdultCheckup01/Questions/ac01_q03.tres" id="8_kovax"]
+[ext_resource type="Resource" uid="uid://c0q141kceuwew" path="res://Data/Appointments/AdultCheckup01/Decisions/ac01_dec3.tres" id="9_3eoyo"]
+[ext_resource type="Resource" uid="uid://c34i33ad3orat" path="res://Data/Appointments/AdultCheckup01/Questions/ac01_q04.tres" id="9_75gbn"]
+[ext_resource type="Resource" uid="uid://dt0wnifdc8bqj" path="res://Data/Appointments/AdultCheckup01/Questions/ac01_q05.tres" id="10_72tqk"]
+[ext_resource type="Resource" uid="uid://f7wuojf8a6c5" path="res://Data/Appointments/AdultCheckup01/Decisions/ac01_dec4.tres" id="10_s6pml"]
+[ext_resource type="Resource" uid="uid://chlj0j7svfoc8" path="res://Data/Appointments/AdultCheckup01/Questions/ac01_q06.tres" id="11_ciull"]
+[ext_resource type="Resource" uid="uid://c7bcch8epukq4" path="res://Data/Appointments/AdultCheckup01/Decisions/ac01_dec5.tres" id="11_cu8ge"]
+[ext_resource type="Resource" uid="uid://bjgxx7f0yndqc" path="res://Data/Appointments/AdultCheckup01/Questions/ac01_q07.tres" id="12_ks341"]
+[ext_resource type="Resource" uid="uid://cf7f6fmdi1hug" path="res://Data/Appointments/AdultCheckup01/Decisions/ac01_dec6.tres" id="12_qlof6"]
+[ext_resource type="Resource" uid="uid://ga4w3xoucpcx" path="res://Data/Appointments/AdultCheckup01/Questions/ac01_q08.tres" id="13_b6ost"]
+[ext_resource type="Resource" uid="uid://dbcuclkq7re7c" path="res://Data/Appointments/AdultCheckup01/Decisions/ac01_dec7.tres" id="13_fou8e"]
+[ext_resource type="Resource" uid="uid://tyi04g60s2xm" path="res://Data/Appointments/AdultCheckup01/Decisions/ac01_dec8.tres" id="14_i6y1n"]
+[ext_resource type="Resource" uid="uid://sna48td68gb5" path="res://Data/Appointments/AdultCheckup01/Questions/ac01_q09.tres" id="14_t8l0n"]
+[ext_resource type="Resource" uid="uid://df8k5h8oapsp3" path="res://Data/Appointments/AdultCheckup01/Decisions/ac01_dec9.tres" id="15_ffmwq"]
+[ext_resource type="Resource" uid="uid://bwtu505vx5qrg" path="res://Data/Appointments/AdultCheckup01/Questions/ac01_q10.tres" id="15_s3w5k"]
+[ext_resource type="Resource" uid="uid://dmabqr0u5i7cx" path="res://Data/Appointments/AdultCheckup01/Decisions/ac01_dec10.tres" id="16_h6bgu"]
+[ext_resource type="Resource" uid="uid://cywogs4i7lt26" path="res://Data/Appointments/AdultCheckup01/Findings/ac01_xray.tres" id="19_lr4u6"]
+[ext_resource type="Resource" uid="uid://dqe0hy1lo6bvm" path="res://Data/Appointments/AdultCheckup01/Findings/ac01_otoscope.tres" id="20_4tf64"]
+[ext_resource type="Resource" uid="uid://8ug33ruuiawe" path="res://Data/Appointments/AdultCheckup01/Findings/ac01_stethoscope.tres" id="21_e6x6j"]
+[ext_resource type="Resource" uid="uid://3sva0qty3q2e" path="res://Data/Appointments/AdultCheckup01/Findings/ac01_thermometer.tres" id="22_7ufah"]
+
+[resource]
+script = ExtResource("4_6u6l3")
+appointment_id = "adult_checkup_01"
+display_name = "Adult Checkup"
+description = "A routine checkup for an adult."
+exam_sheet = ExtResource("3_m6t6e")
+questions = Array[ExtResource("3_nq46j")]([ExtResource("6_h40a2"), ExtResource("7_22yg0"), ExtResource("8_kovax"), ExtResource("9_75gbn"), ExtResource("10_72tqk"), ExtResource("11_ciull"), ExtResource("12_ks341"), ExtResource("13_b6ost"), ExtResource("14_t8l0n"), ExtResource("15_s3w5k")])
+available_tools = Array[ExtResource("1_8y74s")]([ExtResource("2_kovax"), ExtResource("3_75gbn"), ExtResource("4_72tqk"), ExtResource("5_ciull")])
+examination_findings = Array[ExtResource("2_15lxx")]([ExtResource("19_lr4u6"), ExtResource("20_4tf64"), ExtResource("21_e6x6j"), ExtResource("22_7ufah")])
+decisions = Array[ExtResource("2_1iwtw")]([ExtResource("7_hqc77"), ExtResource("8_7sf8e"), ExtResource("9_3eoyo"), ExtResource("10_s6pml"), ExtResource("11_cu8ge"), ExtResource("12_qlof6"), ExtResource("13_fou8e"), ExtResource("14_i6y1n"), ExtResource("15_ffmwq"), ExtResource("16_h6bgu")])
+comfort_target = 12.0
+evidence_target = 2.0
+child_comfort_multiplier = 0.0
+metadata/_custom_type_script = "uid://cwsx7w54sss6e"
