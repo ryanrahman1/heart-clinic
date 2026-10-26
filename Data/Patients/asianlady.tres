@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="PatientData" format=3 uid="uid://dw24ci3uvhg7k"]
+
+[ext_resource type="Texture2D" uid="uid://djemuwmrdl5aj" path="res://Assets/Patients/asianlady.png" id="1_8t12e"]
+[ext_resource type="Script" uid="uid://cuyynoye1i4vf" path="res://Scripts/resources/PatientData.gd" id="1_82bxq"]
+[ext_resource type="PackedScene" uid="uid://dhj17o8kmt3to" path="res://Scenes/Patients/teengirl_patient.tscn" id="1_qhmwr"]
+
+[resource]
+script = ExtResource("1_82bxq")
+patient_id = "asian_lady"
+patient_name = "Shaan"
+age = 19
+portrait = ExtResource("1_8t12e")
+character_scene = ExtResource("1_qhmwr")
+metadata/_custom_type_script = "uid://cuyynoye1i4vf"

@@ -56,6 +56,7 @@ func advance_stage() -> void:
 	match current_stage:
 		Stage.ARRIVAL:
 			_set_stage(Stage.INTERVIEW)
+			print('sef')
 		Stage.INTERVIEW:
 			_set_stage(Stage.EXAMINATION)
 		Stage.EXAMINATION:

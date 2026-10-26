@@ -34,12 +34,14 @@
 [ext_resource type="Resource" uid="uid://dqe0hy1lo6bvm" path="res://Data/Appointments/AdultCheckup01/Findings/ac01_otoscope.tres" id="20_4tf64"]
 [ext_resource type="Resource" uid="uid://8ug33ruuiawe" path="res://Data/Appointments/AdultCheckup01/Findings/ac01_stethoscope.tres" id="21_e6x6j"]
 [ext_resource type="Resource" uid="uid://3sva0qty3q2e" path="res://Data/Appointments/AdultCheckup01/Findings/ac01_thermometer.tres" id="22_7ufah"]
+[ext_resource type="Resource" uid="uid://dw24ci3uvhg7k" path="res://Data/Patients/asianlady.tres" id="23_7sf8e"]
 
 [resource]
 script = ExtResource("4_6u6l3")
 appointment_id = "adult_checkup_01"
 display_name = "Adult Checkup"
 description = "A routine checkup for an adult."
+patient = ExtResource("23_7sf8e")
 exam_sheet = ExtResource("3_m6t6e")
 questions = Array[ExtResource("3_nq46j")]([ExtResource("6_h40a2"), ExtResource("7_22yg0"), ExtResource("8_kovax"), ExtResource("9_75gbn"), ExtResource("10_72tqk"), ExtResource("11_ciull"), ExtResource("12_ks341"), ExtResource("13_b6ost"), ExtResource("14_t8l0n"), ExtResource("15_s3w5k")])
 available_tools = Array[ExtResource("1_8y74s")]([ExtResource("2_kovax"), ExtResource("3_75gbn"), ExtResource("4_72tqk"), ExtResource("5_ciull")])

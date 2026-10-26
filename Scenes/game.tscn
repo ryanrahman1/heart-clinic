@@ -1,3 +1,85 @@
 [gd_scene format=3 uid="uid://chkdbeimtp31w"]
 
+[ext_resource type="Texture2D" uid="uid://du866f4wvpb7p" path="res://Assets/realbg.png" id="1_3dryh"]
+[ext_resource type="Shader" uid="uid://b3j6f83qvao4g" path="res://Assets/Shaders/blurbg.gdshader" id="3_i6g32"]
+[ext_resource type="FontFile" uid="uid://crn2a8jv0gf4u" path="res://Assets/Fonts/Chewy/Chewy-Regular.ttf" id="4_1l0tm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v158k"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_h4fw4"]
+shader = ExtResource("3_i6g32")
+shader_parameter/blur_amount = 2.3610001121475
+shader_parameter/darken_amount = 0.59200002812
+
+[sub_resource type="LabelSettings" id="LabelSettings_p6ys1"]
+font = ExtResource("4_1l0tm")
+font_size = 100
+
 [node name="Game" type="Node2D" unique_id=1004645701]
+
+[node name="World" type="Node2D" parent="." unique_id=1326865760]
+
+[node name="TextureRect" type="TextureRect" parent="World" unique_id=1145443529]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_right = 2953.8462
+offset_bottom = 1661.5386
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.39, 0.39)
+texture = ExtResource("1_3dryh")
+
+[node name="MentorContainer" type="Node2D" parent="World" unique_id=1225680195]
+
+[node name="ToolTable" type="Area2D" parent="World" unique_id=908884613]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/ToolTable" unique_id=1817948845]
+shape = SubResource("RectangleShape2D_v158k")
+
+[node name="SettingsOverlay" type="CanvasLayer" parent="." unique_id=560665773]
+
+[node name="ColorRect" type="ColorRect" parent="SettingsOverlay" unique_id=1681825953]
+material = SubResource("ShaderMaterial_h4fw4")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = -1.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="SettingsOverlay" unique_id=1969887923]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -228.0
+offset_top = 113.0
+offset_right = 229.0
+offset_bottom = 242.0
+grow_horizontal = 2
+text = "Heart Clinic"
+label_settings = SubResource("LabelSettings_p6ys1")
+metadata/_edit_use_anchors_ = true
+
+[node name="Button" type="Button" parent="SettingsOverlay" unique_id=986787771]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -101.0
+offset_top = -12.0
+offset_right = -23.0
+offset_bottom = 17.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2.82, 2.82)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_fonts/font = ExtResource("4_1l0tm")
+text = "Start Game"

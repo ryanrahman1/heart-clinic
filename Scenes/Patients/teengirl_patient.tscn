@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://dhj17o8kmt3to"]
+
+[ext_resource type="Texture2D" uid="uid://djemuwmrdl5aj" path="res://Assets/Patients/asianlady.png" id="1_6xgc8"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_p6ys1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_6xgc8")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Patient" type="AnimatedSprite2D" unique_id=2001104277]
+scale = Vector2(0.23073499, 0.23073499)
+sprite_frames = SubResource("SpriteFrames_p6ys1")

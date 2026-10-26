@@ -1,27 +1,84 @@
 [gd_scene format=3 uid="uid://do2t7uxj7k555"]
 
 [ext_resource type="Script" uid="uid://qcpwt41xcfu3" path="res://Scripts/core/AppointmentManager.gd" id="1_fy1km"]
-[ext_resource type="Texture2D" uid="uid://cs108eptiomrd" path="res://icon.svg" id="2_nq08a"]
+[ext_resource type="Script" uid="uid://bt5x21c6ikkd0" path="res://Scenes/appointment/AppointmenSceneManager.gd" id="1_j3vdt"]
+[ext_resource type="Shader" uid="uid://b3j6f83qvao4g" path="res://Assets/Shaders/blurbg.gdshader" id="2_6i1yo"]
+[ext_resource type="Texture2D" uid="uid://du866f4wvpb7p" path="res://Assets/realbg.png" id="3_fb0l4"]
+[ext_resource type="Script" uid="uid://c4gi3q7submw1" path="res://Scripts/UI/gameplay_ui.gd" id="4_fb0l4"]
+[ext_resource type="Script" uid="uid://nur2triijpds" path="res://Scripts/UI/SettingsUI.gd" id="5_2dwlc"]
+[ext_resource type="Script" uid="uid://bqrofrvk5pxc1" path="res://Scenes/appointment/ChartUI.gd" id="5_6i1yo"]
+[ext_resource type="Texture2D" uid="uid://cy5hg13yn0b70" path="res://Assets/textbox.png" id="5_gd04g"]
+[ext_resource type="Script" uid="uid://d1qghi0rc3j6o" path="res://Scripts/UI/tablebtn.gd" id="5_j3vdt"]
+[ext_resource type="FontFile" uid="uid://crn2a8jv0gf4u" path="res://Assets/Fonts/Chewy/Chewy-Regular.ttf" id="6_vsku5"]
+[ext_resource type="Texture2D" uid="uid://w6s2lm1ffqui" path="res://Assets/Table/Table.png" id="9_dvkxq"]
+[ext_resource type="Script" uid="uid://sr822houpfdr" path="res://Scripts/UI/table_canvas.gd" id="11_l5ui0"]
+[ext_resource type="Texture2D" uid="uid://cfhiie0m42jlv" path="res://Assets/Table/Table_0004_Layer-7.png" id="13_gd04g"]
+[ext_resource type="Texture2D" uid="uid://b6vhs0xkinv68" path="res://Assets/Table/Table_0003_Layer-8.png" id="14_6p3a3"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_p6ys1"]
+[sub_resource type="Gradient" id="Gradient_b853p"]
+offsets = PackedFloat32Array(0, 0.9982729)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_p6ys1"]
+gradient = SubResource("Gradient_b853p")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_6i1yo"]
+shader = ExtResource("2_6i1yo")
+shader_parameter/blur_amount = 2.0
+shader_parameter/darken_amount = 0.3
 
 [node name="Appointment" type="Node2D" unique_id=2030252744]
+script = ExtResource("1_j3vdt")
 
 [node name="AppointmentManager" type="Node" parent="." unique_id=1988163597]
 script = ExtResource("1_fy1km")
 
 [node name="World" type="Node2D" parent="." unique_id=2139720913]
 
-[node name="Background" type="Sprite2D" parent="World" unique_id=1878288283]
+[node name="TextureRect" type="TextureRect" parent="World" unique_id=462816801]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_right = 2953.8462
+offset_bottom = 1661.5386
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.39, 0.39)
+texture = ExtResource("3_fb0l4")
 
 [node name="PatientContainer" type="Node2D" parent="World" unique_id=531184554]
+position = Vector2(384.00003, 457.00003)
+scale = Vector2(0.57013166, 0.57013166)
 
-[node name="MentorContainer" type="Node2D" parent="World" unique_id=888080231]
+[node name="Mentor Container" type="Node2D" parent="World" unique_id=1996733807]
+visible = false
+position = Vector2(772, 457.00003)
+scale = Vector2(0.57013166, 0.57013166)
 
-[node name="ToolTable" type="Area2D" parent="World" unique_id=1764894721]
+[node name="TextureRect" type="TextureRect" parent="World/Mentor Container" unique_id=266044879]
+offset_left = -485.85272
+offset_top = -626.17114
+offset_right = 1434.1472
+offset_bottom = 453.82886
+scale = Vector2(0.51956075, 0.51956075)
+texture = ExtResource("5_gd04g")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="World/ToolTable" unique_id=1144871144]
-shape = SubResource("RectangleShape2D_p6ys1")
+[node name="Label" type="Label" parent="World/Mentor Container/TextureRect" unique_id=537785411]
+layout_mode = 0
+offset_left = 435.49008
+offset_top = 367.97208
+offset_right = 1479.4901
+offset_bottom = 712.97205
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_vsku5")
+theme_override_font_sizes/font_size = 64
+text = "Check your patient chart for
+information about this patient! 
+Then start asking questions 
+using the button below."
+horizontal_alignment = 1
 
 [node name="UI" type="CanvasLayer" parent="." unique_id=2003049050]
 
@@ -40,14 +97,307 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 6
 size_flags_vertical = 6
+script = ExtResource("4_fb0l4")
 metadata/_edit_use_anchors_ = true
 
-[node name="TextureButton" type="TextureButton" parent="UI/GameplayUI" unique_id=1774366126]
+[node name="StartInterview" type="Button" parent="UI/GameplayUI" unique_id=1159373089]
+visible = false
+layout_mode = 0
+offset_left = 474.0
+offset_top = 558.0
+offset_right = 693.0
+offset_bottom = 611.0
+theme_override_fonts/font = ExtResource("6_vsku5")
+theme_override_font_sizes/font_size = 34
+text = "Next Step"
+
+[node name="Button" type="Button" parent="UI/GameplayUI" unique_id=360139623]
+layout_mode = 0
+offset_left = 982.0
+offset_top = 416.0
+offset_right = 1059.0
+offset_bottom = 445.0
+scale = Vector2(2.01, 2.01)
+theme_override_fonts/font = ExtResource("6_vsku5")
+text = "Open Table"
+script = ExtResource("5_j3vdt")
+
+[node name="QuestionArea" type="Control" parent="UI/GameplayUI" unique_id=2063377346]
+visible = false
+layout_mode = 1
+anchor_right = 0.22500001
+anchor_bottom = 0.20500001
+offset_left = 537.0
+offset_top = 250.0
+offset_right = 726.8357
+offset_bottom = 394.38998
+
+[node name="ColorRect" type="ColorRect" parent="UI/GameplayUI/QuestionArea" unique_id=1352365937]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -97.0
+offset_right = -24.0
+offset_bottom = 49.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.28235295)
+
+[node name="Q5" type="Button" parent="UI/GameplayUI/QuestionArea/ColorRect" unique_id=1717806347]
+custom_minimum_size = Vector2(350, 0)
+layout_mode = 0
+offset_left = 13.0
+offset_top = 349.0
+offset_right = 413.0
+offset_bottom = 403.0
+theme_override_fonts/font = ExtResource("6_vsku5")
+text = "Question blah blah"
+autowrap_mode = 2
+
+[node name="Q4" type="Button" parent="UI/GameplayUI/QuestionArea/ColorRect" unique_id=1827911414]
+custom_minimum_size = Vector2(350, 0)
+layout_mode = 0
+offset_left = 13.0
+offset_top = 274.0
+offset_right = 413.0
+offset_bottom = 328.0
+theme_override_fonts/font = ExtResource("6_vsku5")
+text = "Question blah blah"
+autowrap_mode = 2
+
+[node name="Q3" type="Button" parent="UI/GameplayUI/QuestionArea/ColorRect" unique_id=847483771]
+custom_minimum_size = Vector2(350, 0)
+layout_mode = 0
+offset_left = 13.0
+offset_top = 203.0
+offset_right = 413.0
+offset_bottom = 257.0
+theme_override_fonts/font = ExtResource("6_vsku5")
+text = "Question blah blah"
+autowrap_mode = 2
+
+[node name="Q2" type="Button" parent="UI/GameplayUI/QuestionArea/ColorRect" unique_id=205727750]
+custom_minimum_size = Vector2(350, 0)
+layout_mode = 0
+offset_left = 13.0
+offset_top = 135.0
+offset_right = 413.0
+offset_bottom = 189.0
+theme_override_fonts/font = ExtResource("6_vsku5")
+text = "Question blah blah"
+autowrap_mode = 2
+
+[node name="Q1" type="Button" parent="UI/GameplayUI/QuestionArea/ColorRect" unique_id=26664467]
+custom_minimum_size = Vector2(350, 0)
+layout_mode = 0
+offset_left = 13.0
+offset_top = 70.0
+offset_right = 413.0
+offset_bottom = 124.0
+theme_override_fonts/font = ExtResource("6_vsku5")
+text = "Question blah blah"
+autowrap_mode = 2
+
+[node name="continuebtn" type="Button" parent="UI/GameplayUI/QuestionArea" unique_id=803079815]
+visible = false
+layout_mode = 0
+offset_left = 138.0
+offset_top = 253.0
+offset_right = 201.0
+offset_bottom = 282.0
+scale = Vector2(2.29, 2.29)
+theme_override_fonts/font = ExtResource("6_vsku5")
+text = "Continue"
+
+[node name="Label" type="Label" parent="UI/GameplayUI/QuestionArea" unique_id=125423882]
+custom_maximum_size = Vector2(407.2, -1)
+layout_mode = 0
+offset_left = 18.0
+offset_top = -78.0
+offset_right = 421.0
+offset_bottom = -24.0
+theme_override_fonts/font = ExtResource("6_vsku5")
+theme_override_font_sizes/font_size = 41
+text = "Ask a Question: X left"
+autowrap_mode = 2
+
+[node name="ChartArea" type="Control" parent="UI/GameplayUI" unique_id=283669211]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -1154.0
+offset_top = -125.0
+offset_right = -997.0
+offset_bottom = 112.0
+grow_horizontal = 0
+grow_vertical = 2
+script = ExtResource("5_6i1yo")
+
+[node name="TextureRect" type="TextureRect" parent="UI/GameplayUI/ChartArea" unique_id=775298259]
+layout_mode = 0
+offset_left = -147.0
+offset_right = 109.0
+offset_bottom = 247.0
+offset_transform_enabled = true
+texture = SubResource("GradientTexture1D_p6ys1")
+
+[node name="MenuButton" type="MenuButton" parent="UI/GameplayUI" unique_id=533629048]
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -128.0
-offset_bottom = 128.0
+offset_left = -76.0
+offset_bottom = 45.0
 grow_horizontal = 0
-texture_normal = ExtResource("2_nq08a")
+text = "Menu"
+item_count = 3
+popup/item_0/text = "Start Appointment[dev]"
+popup/item_0/id = 0
+popup/item_1/text = "Settings"
+popup/item_1/id = 1
+popup/item_2/text = "Quit Game"
+popup/item_2/id = 2
+
+[node name="Label" type="Label" parent="UI" unique_id=1400345152]
+offset_left = 19.0
+offset_top = 18.0
+offset_right = 253.0
+offset_bottom = 61.3125
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_vsku5")
+theme_override_font_sizes/font_size = 33
+text = "Current Patient: X"
+
+[node name="Label2" type="Label" parent="UI" unique_id=1561870747]
+offset_left = 19.0
+offset_top = 64.0
+offset_right = 253.0
+offset_bottom = 107.3125
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_vsku5")
+theme_override_font_sizes/font_size = 33
+text = "Current Patient: X"
+
+[node name="SettingsOverlay" type="CanvasLayer" parent="." unique_id=135453686]
+offset = Vector2(0, 900)
+transform = Transform2D(1, 0, 0, 1, 0, 900)
+script = ExtResource("5_2dwlc")
+
+[node name="ColorRect" type="ColorRect" parent="SettingsOverlay" unique_id=592241196]
+material = SubResource("ShaderMaterial_6i1yo")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button" type="Button" parent="SettingsOverlay" unique_id=1987431236]
+offset_left = 302.0
+offset_top = 181.0
+offset_right = 850.0
+offset_bottom = 487.0
+text = "like ig bro idk"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1921467171]
+visible = false
+script = ExtResource("11_l5ui0")
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=1172092189]
+offset_left = -3.0
+offset_top = -52.0
+offset_right = 1158.0
+offset_bottom = 818.75
+texture = ExtResource("9_dvkxq")
+expand_mode = 1
+
+[node name="blurbg" type="ColorRect" parent="CanvasLayer" unique_id=1865150498]
+visible = false
+material = SubResource("ShaderMaterial_6i1yo")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Tools" type="Control" parent="CanvasLayer" unique_id=2072897731]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="Stethoscope" type="TextureRect" parent="CanvasLayer/Tools" unique_id=33345732]
+z_index = 71
+layout_mode = 0
+offset_left = -3.0
+offset_top = -53.0
+offset_right = 1158.3334
+offset_bottom = 818.0
+mouse_filter = 0
+mouse_default_cursor_shape = 2
+texture = ExtResource("13_gd04g")
+expand_mode = 1
+
+[node name="mousearea" type="Control" parent="CanvasLayer/Tools/Stethoscope" unique_id=1083126016]
+anchors_preset = 0
+offset_left = 807.0
+offset_top = 118.0
+offset_right = 1045.0
+offset_bottom = 400.0
+
+[node name="Stethoscope" type="Label" parent="CanvasLayer/Tools/Stethoscope" unique_id=1171880677]
+visible = false
+layout_mode = 0
+offset_left = 665.0
+offset_top = 307.0
+offset_right = 852.0
+offset_bottom = 359.5
+theme_override_fonts/font = ExtResource("6_vsku5")
+theme_override_font_sizes/font_size = 40
+text = "Stethoscope"
+
+[node name="Xray" type="TextureRect" parent="CanvasLayer/Tools" unique_id=1226088617]
+z_index = 71
+layout_mode = 0
+offset_left = -3.0
+offset_top = -53.0
+offset_right = 1158.3334
+offset_bottom = 818.0
+mouse_filter = 2
+mouse_default_cursor_shape = 2
+texture = ExtResource("14_6p3a3")
+expand_mode = 1
+
+[node name="mousearea" type="Control" parent="CanvasLayer/Tools/Xray" unique_id=1790050285]
+anchors_preset = 0
+offset_left = 367.0
+offset_top = 374.0
+offset_right = 700.0
+offset_bottom = 635.0
+
+[node name="Xray" type="Label" parent="CanvasLayer/Tools/Xray" unique_id=904626925]
+visible = false
+layout_mode = 0
+offset_left = 740.0
+offset_top = 443.0
+offset_right = 958.0
+offset_bottom = 495.5
+theme_override_fonts/font = ExtResource("6_vsku5")
+theme_override_font_sizes/font_size = 40
+text = "Xray Machine"
+
+[node name="Button" type="Button" parent="CanvasLayer" unique_id=1713187354]
+offset_left = 60.000004
+offset_top = 52.0
+offset_right = 178.0
+offset_bottom = 162.0
+scale = Vector2(0.70293164, 0.70293164)
+theme_override_fonts/font = ExtResource("6_vsku5")
+theme_override_font_sizes/font_size = 77
+text = "  X  "
+
+[connection signal="mouse_entered" from="CanvasLayer/Tools/Stethoscope/mousearea" to="CanvasLayer" method="_on_stethoscope_mouse_entered"]
+[connection signal="mouse_exited" from="CanvasLayer/Tools/Stethoscope/mousearea" to="CanvasLayer" method="_on_stethoscope_mouse_exited"]
+[connection signal="mouse_entered" from="CanvasLayer/Tools/Xray/mousearea" to="CanvasLayer" method="_on_xray_mouse_entered"]
+[connection signal="mouse_exited" from="CanvasLayer/Tools/Xray/mousearea" to="CanvasLayer" method="_on_xray_mouse_exited"]
