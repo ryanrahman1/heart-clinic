@@ -1,9 +1,13 @@
 extends Control
 
+const CHART_ZOOM := 1.85
+
 @onready var chart_texture = $TextureRect
+@onready var chart_label = $TextureRect/Label
 
 var hover_dist = -100
 var default_position: Vector2
+var default_scale: Vector2
 var tween: Tween
 var is_centered: bool = false
 
@@ -11,6 +15,7 @@ signal chart_opened
 
 func _ready():
 	default_position = chart_texture.position
+	default_scale = chart_texture.scale
 	
 	mouse_entered.connect(_on_mouse_entered)
 	mouse_exited.connect(_on_mouse_exited)
@@ -52,12 +57,16 @@ func center_chart():
 	if tween and tween.is_running(): tween.kill()
 	
 	var screen_center = get_viewport_rect().size / 2
-	var target_position = screen_center - (chart_texture.size / 2) - global_position
+	var zoom_scale := Vector2(CHART_ZOOM, CHART_ZOOM)
+	var scaled_half: Vector2 = chart_texture.size * zoom_scale * 0.5
+	var target_position: Vector2 = screen_center - global_position - scaled_half
 	
 	tween = create_tween()
 	tween.set_trans(Tween.TRANS_CUBIC)
 	tween.set_ease(Tween.EASE_OUT)
+	tween.set_parallel(true)
 	tween.tween_property(chart_texture, "position", target_position, 0.5)
+	tween.tween_property(chart_texture, "scale", zoom_scale, 0.5)
 
 func reset_chart():
 	is_centered = false
@@ -66,4 +75,9 @@ func reset_chart():
 	tween = create_tween()
 	tween.set_trans(Tween.TRANS_CUBIC)
 	tween.set_ease(Tween.EASE_OUT)
+	tween.set_parallel(true)
 	tween.tween_property(chart_texture, "position", default_position, 0.4)
+	tween.tween_property(chart_texture, "scale", default_scale, 0.4)
+
+func set_chart_text(text: String) -> void:
+	chart_label.text = text

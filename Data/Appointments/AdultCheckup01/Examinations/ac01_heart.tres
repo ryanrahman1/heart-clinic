@@ -7,6 +7,7 @@ script = ExtResource("1_uu0kv")
 examination_id = "stethoscope_heartbeat"
 display_name = "Listen to Heartbeat"
 description = "Use a stethoscope to listen to the patient's heartbeat and check its rhythm."
+minigame_layer_name = "StethoscopeMinigame"
 comfort_change = 2.0
 trust_change = 3.0
 metadata/_custom_type_script = "uid://dn2slsmn2rsfe"

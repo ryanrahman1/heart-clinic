@@ -1,6 +1,8 @@
 class_name AppointmentManager
 extends Node
 
+const DEV_PRINT_PATIENT_VALUES := true
+
 enum Stage {
 	INACTIVE,
 	ARRIVAL,
@@ -76,6 +78,7 @@ func ask_question(question: QuestionData) -> bool:
 	question_asked.emit(question)
 	patient_state_changed.emit(session.patient_state)
 	chart_updated.emit(session.chart)
+	_dev_print_patient_values("question")
 	
 	return true
 
@@ -99,9 +102,10 @@ func complete_examination() -> bool:
 	if index == -1: push_error("none"); return false
 	var obsv: ExaminationFinding = session.appointment.examination_findings[index]
 	
-	examination_completed.emit(cur_exam, obsv.obervation)
+	examination_completed.emit(cur_exam, obsv.observation)
 	patient_state_changed.emit(session.patient_state)
 	chart_updated.emit(session.chart)
+	_dev_print_patient_values("examination")
 	
 	return true
 
@@ -134,3 +138,14 @@ func finish_appointment() -> void:
 	results = scorer.return_results(session)
 	_set_stage(Stage.RESULTS)
 	appointment_completed.emit(results)
+
+func _dev_print_patient_values(context: String) -> void:
+	if not DEV_PRINT_PATIENT_VALUES:
+		return
+	if session == null or session.patient_state == null:
+		return
+	print("[dev {ctx}] comfort: {c} trust: {t}".format({
+		"ctx": context,
+		"c": session.patient_state.comfort,
+		"t": session.patient_state.trust
+	}))

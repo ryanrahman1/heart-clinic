@@ -7,7 +7,7 @@ extends Resource
 @export_multiline var description: String = ""
 
 @export_group("Minigame")
-@export var minigame_scene: PackedScene
+@export var minigame_layer_name: String = "" # canvas layer node name on appointment scene
 
 @export_group("Patient Effects")
 @export var comfort_change: float = 0.0

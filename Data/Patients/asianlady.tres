@@ -7,8 +7,9 @@
 [resource]
 script = ExtResource("1_82bxq")
 patient_id = "asian_lady"
-patient_name = "Shaan"
+patient_name = "Aiko"
 age = 19
 portrait = ExtResource("1_8t12e")
 character_scene = ExtResource("1_qhmwr")
+knowledge = 78.0
 metadata/_custom_type_script = "uid://cuyynoye1i4vf"

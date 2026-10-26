@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://bkj3bxnqr5udi"]
+
+[ext_resource type="Texture2D" uid="uid://42yc7f1c3qdr" path="res://Assets/patientchart.png" id="1_fmaj0"]
+[ext_resource type="FontFile" uid="uid://crn2a8jv0gf4u" path="res://Assets/Fonts/Chewy/Chewy-Regular.ttf" id="2_srs1h"]
+
+[node name="TextureRect" type="TextureRect" unique_id=179207818]
+offset_left = -31.0
+offset_top = 36.0
+offset_right = 224.0
+offset_bottom = 400.0
+offset_transform_enabled = true
+texture = ExtResource("1_fmaj0")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="." unique_id=1205109814]
+custom_maximum_size = Vector2(173.85, -1)
+layout_mode = 0
+offset_left = 49.0
+offset_top = 80.0
+offset_right = 222.85
+offset_bottom = 312.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_srs1h")
+theme_override_font_sizes/font_size = 5
+autowrap_mode = 3
